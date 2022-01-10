@@ -16,6 +16,13 @@
             <td>{{ item.price * item.quantity }}</td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>{{ totalQuantity }}</td>
+            <td>{{ totalPrice }}</td>
+          </tr>
+        </tfoot>
       </table>
     </div>
     <div>
@@ -49,12 +56,24 @@
 <script>
 export default {
   name: "shopping",
-  data() {},
+  data() {
+    return {};
+  },
   computed: {
     costumerCart() {
       return this.$store.state.cart;
     },
+    totalPrice() {
+      return this.$store.state.cart.reduce(
+        (a, b) => a + b.price * b.quantity,
+        0
+      );
+    },
+    totalQuantity() {
+      return this.$store.state.cart.reduce((a, b) => a + b.quantity, 0);
+    },
   },
+  methods: {},
 };
 </script>
 

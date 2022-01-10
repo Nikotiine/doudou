@@ -2,6 +2,7 @@
   <div id="nav">
     <router-link to="/">Accueil</router-link> |
     <router-link to="/creations">Creations</router-link> |
+    <router-link to="/prestations">Prestations</router-link> |
     <router-link to="/atelier">L'atelier</router-link> |
     <router-link to="/commander">Commander</router-link>
   </div>
