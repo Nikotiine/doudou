@@ -4,11 +4,17 @@
     <router-link to="/creations">Creations</router-link> |
     <router-link to="/prestations">Prestations</router-link> |
     <router-link to="/atelier">L'atelier</router-link> |
-    <router-link to="/commander">Commander</router-link>
+    <router-link to="/commander"><panier /></router-link> |
+    <span></span>
   </div>
   <router-view />
 </template>
-
+<script>
+import panier from "../src/components/panier.vue";
+export default {
+  components: { panier },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
